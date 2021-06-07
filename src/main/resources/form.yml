@@ -1,0 +1,45 @@
+form:
+- formName: Lịch Sử Chơi
+  formCode: BH
+  isActive: true
+  actions: []
+- formName: Tạo Phiếu Nạp
+  formCode: TC
+  isActive: true
+  actions: []
+- formName: Quản Lý Giao Dịch
+  formCode: TH
+  isActive: true
+  actions: []
+- formName: Thống Kê Chuyển Tiền
+  formCode: TS
+  isActive: true
+  actions: []
+- formName: Doanh Thu Đại Lý
+  formCode: MRT
+  isActive: true
+  actions: []
+- formName: Mua Giftcode
+  formCode: BGC
+  isActive: true
+  actions: []
+- formName: Danh Sách Giftcode
+  formCode: GCL
+  isActive: true
+  actions: []
+- formName: Danh Sách Bank Bẩn
+  formCode: MA
+  isActive: true
+  actions: []
+- formName: Thống Kê Win-Loss
+  formCode: WL
+  isActive: true
+  actions: []
+- formName: Quản lý truy cập
+  formCode: AC
+  isActive: true
+  actions: []
+- formName: Quản lý danh sách màn hình
+  formCode: AC
+  isActive: true
+  actions: []

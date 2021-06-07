@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+        <property name="LOG_PATH" value="/home/agencybo/agency_backend/logs" />
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${LOG_PATH}/log.txt</file>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>
+                    %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+                </Pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- rollover daily -->
+                <fileNamePattern>${LOG_PATH}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>10MB</maxFileSize>
+                </timeBasedFileNamingAndTriggeringPolicy>
+            </rollingPolicy>
+        </appender>
+
+        <logger name="org.springframework.data.mongodb.core.ReactiveMongoTemplate" level="ERROR">
+            <appender-ref ref="FILE" />
+        </logger>
+
+        <logger name="org.springframework.data.elasticsearch.client.WIRE" level="ERROR">
+            <appender-ref ref="FILE" />
+        </logger>
+
+        <root level="ERROR">
+            <appender-ref ref="FILE" />
+        </root>
+
+</configuration>
+
